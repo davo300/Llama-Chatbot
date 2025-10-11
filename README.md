@@ -1,5 +1,5 @@
-# Llama 4 Chatbot App
-– Developing a chatbot application powered by the open-source Llama 4 LLM to provide automated feedback on
+# Llama Chatbot App
+– Developing a chatbot application powered by the open-source Llama LLM to provide automated feedback on
 compiler course assignments
 
 – Implementing core model logic in Python using PyTorch, NumPy, and Google Colab, focusing on analyzing
