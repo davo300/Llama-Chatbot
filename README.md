@@ -1,5 +1,7 @@
 # Llama Chatbot App
 
+- Part of COMP-4960 Research Project Course.
+
 – Developing a chatbot application powered by the open-source Llama LLM to provide automated feedback on
 compiler course assignments
 
