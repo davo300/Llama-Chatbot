@@ -1,0 +1,59 @@
+{"instruction": "What are the main phases of a compiler?", "response": "A typical compiler performs lexical analysis, syntax analysis, semantic analysis, intermediate code generation, optimization, and target code generation."}
+
+{"instruction": "What is the role of the lexical analyzer?", "response": "The lexical analyzer reads source code character by character, groups them into tokens such as identifiers and keywords, and passes these tokens to the parser."}
+
+{"instruction": "What does JLex generate from a .lex file?", "response": "JLex produces a Java class that implements a scanner. This class reads characters and returns tokens according to the regular expressions defined in the .lex file."}
+
+{"instruction": "What is a token in compiler design?", "response": "A token is the smallest meaningful unit in the source code, represented by a token name, attribute value, and lexeme, such as IDENTIFIER or NUMBER."}
+
+{"instruction": "How does CUP relate to JLex in a compiler project?", "response": "JLex handles lexical analysis, producing tokens, while CUP handles syntax analysis, consuming those tokens to build a parse tree according to a grammar."}
+
+{"instruction": "What is a shift-reduce conflict?", "response": "In bottom-up parsing, a shift-reduce conflict occurs when the parser generator cannot decide whether to shift the next input token or reduce the current rule."}
+
+{"instruction": "What is a reduce-reduce conflict?", "response": "A reduce-reduce conflict happens when two or more grammar rules could be reduced by the same lookahead token. It usually means the grammar is ambiguous."}
+
+{"instruction": "What is a context-free grammar?", "response": "A context-free grammar consists of terminals, nonterminals, a start symbol, and production rules where each rule replaces a single nonterminal with a string of symbols."}
+
+{"instruction": "How can ambiguous grammars affect parsing?", "response": "Ambiguous grammars allow multiple parse trees for the same input, making parser generation unreliable. Resolving ambiguity requires grammar refactoring or precedence rules."}
+
+{"instruction": "What is the purpose of the parser?", "response": "The parser checks if the token sequence follows the grammar rules and builds a parse tree or abstract syntax tree representing the syntactic structure of the source code."}
+
+{"instruction": "What is an abstract syntax tree?", "response": "An abstract syntax tree (AST) represents the hierarchical structure of source code without unnecessary syntax details like parentheses or commas."}
+
+{"instruction": "What are syntax-directed translation schemes?", "response": "They attach semantic actions to grammar productions to define how syntax constructs translate into intermediate representations or code."}
+
+{"instruction": "What is a symbol table?", "response": "A symbol table is a data structure that stores identifiers, their types, scopes, and other attributes used during semantic analysis and code generation."}
+
+{"instruction": "Explain the difference between static and dynamic scoping.", "response": "Static scoping determines variable scope based on program structure at compile time, while dynamic scoping depends on the call sequence at runtime."}
+
+{"instruction": "What is type checking?", "response": "Type checking verifies that operations in a program are applied to compatible data types, catching mismatched expressions at compile time or runtime."}
+
+{"instruction": "What is intermediate code generation?", "response": "Intermediate code is an abstract form between source and machine code. It simplifies optimization and can be easily translated to target code, e.g., three-address code."}
+
+{"instruction": "What is three-address code?", "response": "Three-address code uses simple statements of the form x = y op z, where each instruction has at most three addresses. It’s common in compiler IRs."}
+
+{"instruction": "What is constant folding?", "response": "Constant folding is an optimization that precomputes expressions involving constants at compile time to reduce runtime computation."}
+
+{"instruction": "What is dead code elimination?", "response": "Dead code elimination removes statements whose results are never used, improving performance and reducing code size."}
+
+{"instruction": "What is a code optimizer?", "response": "A code optimizer transforms intermediate code to make it faster or smaller without changing its semantics, using techniques like constant folding or loop unrolling."}
+
+{"instruction": "What is target code generation?", "response": "Target code generation translates optimized intermediate representation into machine or assembly code suitable for the target architecture."}
+
+{"instruction": "What are attributes in a grammar?", "response": "Attributes store semantic information for grammar symbols, such as type or value, and are used in syntax-directed translation."}
+
+{"instruction": "Explain synthesized vs inherited attributes.", "response": "Synthesized attributes are computed from children nodes and passed up the parse tree, while inherited attributes come from parent or sibling nodes."}
+
+{"instruction": "What is error recovery in parsing?", "response": "Error recovery attempts to continue parsing after a syntax error, using methods like panic mode, phrase-level correction, or inserting missing symbols."}
+
+{"instruction": "What is left recursion and why remove it?", "response": "Left recursion causes infinite loops in top-down parsers. Rewriting rules to be right-recursive removes this issue, enabling predictive parsing."}
+
+{"instruction": "What is left factoring in grammars?", "response": "Left factoring refactors a grammar so common prefixes are factored out, allowing parsers to choose the correct production using one lookahead token."}
+
+{"instruction": "What is lexical error handling?", "response": "Lexical error handling detects and recovers from invalid character sequences by skipping or replacing characters to continue scanning."}
+
+{"instruction": "How are precedence and associativity rules used?", "response": "They resolve ambiguities in grammars by specifying operator priorities (precedence) and evaluation direction (associativity)."}
+
+{"instruction": "What is semantic analysis?", "response": "Semantic analysis ensures the syntactic structure follows language rules like type compatibility, declared variable usage, and correct scoping."}
+
+{"instruction": "How is a parse tree different from an AST?", "response": "A parse tree shows every grammar rule applied, including intermediate nodes, while an AST omits unnecessary syntax to capture only essential structure."}

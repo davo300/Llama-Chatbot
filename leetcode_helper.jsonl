@@ -1,0 +1,39 @@
+{"instruction": "Problem: Two Sum\nExplain the optimal solution.", "response": "Use a hash map to store each number's complement while iterating. For each num, check if target - num exists in the map. This yields O(n) time and O(n) space."}
+
+{"instruction": "Problem: Best Time to Buy and Sell Stock\nExplain the one-pass solution.", "response": "Track the minimum price seen so far and the maximum profit at each step. For each price, profit = price - min_price. Update max_profit accordingly."}
+
+{"instruction": "Problem: Valid Parentheses\nHow can we check if the parentheses are balanced?", "response": "Use a stack. Push opening brackets, and pop when a matching closing one appears. If a mismatch or leftover remains, return false; else true."}
+
+{"instruction": "Problem: Merge Two Sorted Lists\nExplain the iterative approach.", "response": "Create a dummy node. Compare heads of both lists and attach the smaller node to current. Advance pointers until one list is empty, then append the remainder."}
+
+{"instruction": "Problem: Maximum Subarray\nExplain Kadane's algorithm.", "response": "Keep a running sum that resets to zero when negative. Track the maximum sum observed. This efficiently finds the largest contiguous subarray in O(n)."}
+
+{"instruction": "Problem: Climbing Stairs\nExplain the dynamic programming approach.", "response": "Each step count depends on the previous two. dp[i] = dp[i-1] + dp[i-2]. Initialize dp[1]=1, dp[2]=2. Return dp[n]. Equivalent to Fibonacci sequence."}
+
+{"instruction": "Problem: Binary Search\nDescribe the iterative algorithm.", "response": "Set low = 0, high = len(nums)-1. While low <= high, mid = (low + high)//2. If nums[mid]==target, return mid. Adjust low/high depending on comparison."}
+
+{"instruction": "Problem: Reverse Linked List\nExplain the iterative solution.", "response": "Use three pointers: prev=None, curr=head, next=None. Loop while curr: next=curr.next; curr.next=prev; prev=curr; curr=next. Return prev."}
+
+{"instruction": "Problem: Valid Anagram\nHow do we determine if two strings are anagrams?", "response": "Sort both strings and compare equality, or count characters using a hash map. Equal counts for each character imply an anagram."}
+
+{"instruction": "Problem: Number of Islands\nExplain the DFS approach.", "response": "Iterate grid cells; when you find '1', run DFS to mark all connected land as visited. Increment island count for each DFS invocation."}
+
+{"instruction": "Problem: Subsets\nExplain the backtracking method.", "response": "Use recursion: at each index, either include or exclude the current element. Append current subset to results. Total subsets = 2^n."}
+
+{"instruction": "Problem: Kth Smallest Element in a BST\nDescribe an efficient approach.", "response": "Do inorder traversal (stack or recursion). Stop counting when reaching the kth node since BST inorder traversal yields sorted order."}
+
+{"instruction": "Problem: Coin Change\nExplain the DP solution.", "response": "Initialize dp[0]=0, and dp[i]=infinity for others. For each coin, iterate i=coin..amount: dp[i]=min(dp[i], dp[i-coin]+1). Return dp[amount] or -1 if impossible."}
+
+{"instruction": "Problem: Implement Queue using Stacks\nExplain the concept.", "response": "Use two stacks: pushStack for enqueue, popStack for dequeue. Move all items from pushStack to popStack when popStack is empty before popping."}
+
+{"instruction": "Problem: Minimum Depth of Binary Tree\nExplain the recursive solution.", "response": "If root is None, return 0. Recursively find left and right depths. If one child is missing, take the non-zero side; otherwise, min(left,right)+1."}
+
+{"instruction": "Problem: Meeting Rooms\nHow to check if all meetings can be attended?", "response": "Sort intervals by start time. Check for any overlap where current.start < previous.end. If overlap exists, return false; else true."}
+
+{"instruction": "Problem: Merge Intervals\nExplain the merging logic.", "response": "Sort intervals by start. Iterate, merging overlapping ones by extending end = max(current.end, next.end). Append non-overlapping intervals to result."}
+
+{"instruction": "Problem: Valid Palindrome\nExplain the two-pointer method.", "response": "Use left and right pointers moving toward each other. Skip non-alphanumeric characters. Compare lowercase forms; if mismatch, return false."}
+
+{"instruction": "Problem: Search Insert Position\nExplain the approach.", "response": "Use binary search. Return mid if target found; if not, when low > high, return low as insertion index maintaining sorted order."}
+
+{"instruction": "Problem: Maximum Depth of Binary Tree\nHow to compute recursively?", "response": "If node is null, return 0. Return 1 + max(depth(left), depth(right)). This yields the longest root-to-leaf path."}
